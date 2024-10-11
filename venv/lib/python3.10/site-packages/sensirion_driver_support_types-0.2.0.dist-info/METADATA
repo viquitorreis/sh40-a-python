@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: sensirion-driver-support-types
+Version: 0.2.0
+Summary: Supporting classes for Sensirion drivers
+Home-page: http://developers.sensirion.com
+Author: Rolf Laich
+Author-email: rolf.laich@sensirion.com
+License: BSD 3-Clause License
+Keywords: driver
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6, <4
+Provides-Extra: docs
+Requires-Dist: docutils (~=0.17.1) ; extra == 'docs'
+Requires-Dist: sphinx (~=2.2.1) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (~=0.4.3) ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: flake8 (~=3.9.2) ; extra == 'test'
+Requires-Dist: pytest (~=5.4.3) ; extra == 'test'
+Requires-Dist: pytest-cov (~=2.12.1) ; extra == 'test'
+
+sensirion-driver-support-types
+==============================
+
+Install
+-------
+.. sourcecode:: bash
+
+    pip install sensirion-driver-support-types
+
+Recommended usage is within a virtualenv.
+
+Usage
+-----
+.. sourcecode:: python
+
+    import sensirion_driver_support_types
+
+CHANGELOG
+---------
+
+0.2.0
+:::::
+- Provide string representation and int conversion for Bitfields
+
+0.1.0
+:::::
+- Initial release
+
+

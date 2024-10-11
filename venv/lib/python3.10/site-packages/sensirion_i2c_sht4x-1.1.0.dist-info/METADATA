@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: sensirion-i2c-sht4x
+Version: 1.1.0
+Summary: I2C driver for the Sensirion SHT4X sensor family
+Home-page: UNKNOWN
+Author: Sensirion
+Author-email: info@sensirion.com
+License: BSD
+Project-URL: Documentation, https://sensirion.github.io/python-i2c-sht4x
+Project-URL: Repository, https://github.com/Sensirion/python-i2c-sht4x
+Project-URL: Changelog, https://github.com/Sensirion/python-i2c-sht4x/blob/master/CHANGELOG.md
+Keywords: Sensirion SHT4X
+        I2C
+        SHT40
+        SHT41
+        SHT45
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Requires-Dist: sensirion-i2c-driver (<2.0,>=1.0.0)
+Requires-Dist: sensirion-driver-adapters (<3.0,>=2.1.9)
+Requires-Dist: sensirion-driver-support-types (~=0.2.0)
+Requires-Dist: sensirion-shdlc-sensorbridge (<0.3.0,>=0.1.0)
+Provides-Extra: test
+Requires-Dist: flake8 (~=3.7.8) ; extra == 'test'
+Requires-Dist: pytest (~=6.2.5) ; extra == 'test'
+Requires-Dist: pytest-cov (~=3.0.0) ; extra == 'test'
+
+# Python I2C Driver for Sensirion SHT4X
+
+This repository contains the Python driver to communicate with a Sensirion sensor of the SHT4X family over I2C.
+
+<img src="https://raw.githubusercontent.com/Sensirion/python-i2c-sht4x/master/images/SHT4x.png"
+    width="300px" alt="SHT4X picture">
+
+
+Click [here](https://sensirion.com/products/catalog/SEK-SHT40/) to learn more about the Sensirion SHT4X sensor family.
+
+
+
+## Supported sensor types
+
+| Sensor name   | IÂ²C Addresses  |
+| ------------- | -------------- |
+|[SHT40](https://sensirion.com/products/catalog/SHT40/)| **0x44**, 0x45|
+|[SHT41](https://sensirion.com/products/catalog/SHT41/)| **0x44**, 0x45|
+|[SHT45](https://sensirion.com/products/catalog/SHT45/)| **0x44**, 0x45|
+
+The following instructions and examples use a *SHT40*.
+
+
+
+## Connect the sensor
+
+You can connect your sensor over a [SEK-SensorBridge](https://developer.sensirion.com/sensirion-products/sek-sensorbridge/).
+For special setups you find the sensor pinout in the section below.
+
+<details><summary>Sensor pinout</summary>
+<p>
+<img src="https://raw.githubusercontent.com/Sensirion/python-i2c-sht4x/master/images/SHT40_pinout.png"
+     width="300px" alt="sensor wiring picture">
+
+| *Pin* | *Cable Color* | *Name* | *Description*  | *Comments* |
+|-------|---------------|:------:|----------------|------------|
+| 1 | green | SDA | I2C: Serial data input / output |
+| 2 | black | GND | Ground |
+| 3 | yellow | SCL | I2C: Serial clock input |
+| 4 | red | VDD | Supply Voltage | 1.1V to 3.6V
+
+
+</p>
+</details>
+
+
+## Documentation & Quickstart
+
+See the [documentation page](https://sensirion.github.io/python-i2c-sht4x) for an API description and a
+[quickstart](https://sensirion.github.io/python-i2c-sht4x/execute-measurements.html) example.
+
+
+## Contributing
+
+We develop and test this driver using our company internal tools (version
+control, continuous integration, code review etc.) and automatically
+synchronize the `master` branch with GitHub. But this doesn't mean that we
+don't respond to issues or don't accept pull requests on GitHub. In fact,
+you're very welcome to open issues or create pull requests :-)
+
+### Check coding style
+
+The coding style can be checked with [`flake8`](http://flake8.pycqa.org/):
+
+```bash
+pip install -e .[test]  # Install requirements
+flake8                  # Run style check
+```
+
+In addition, we check the formatting of files with
+[`editorconfig-checker`](https://editorconfig-checker.github.io/):
+
+```bash
+pip install editorconfig-checker==2.0.3   # Install requirements
+editorconfig-checker                      # Run check
+```
+
+## License
+
+See [LICENSE](LICENSE).
+

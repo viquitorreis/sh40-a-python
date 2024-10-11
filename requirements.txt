@@ -1,0 +1,4 @@
+sensirion-i2c-driver
+sensirion-driver-adapters
+sensirion-i2c-sht4x
+smbus2

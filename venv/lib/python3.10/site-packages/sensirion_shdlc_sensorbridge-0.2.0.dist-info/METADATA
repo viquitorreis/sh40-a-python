@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: sensirion-shdlc-sensorbridge
+Version: 0.2.0
+Summary: Driver for Communicating With Sensirion SEK-SensorBridge
+Home-page: https://github.com/sensirion/python-shdlc-sensorbridge
+Author: Sensirion
+Author-email: info@sensirion.com
+License: BSD
+Keywords: shdlc sensirion sensor bridge sensorbridge driver
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4
+Requires-Dist: sensirion-shdlc-driver[fwupdate] (~=0.1.1)
+Requires-Dist: enum34 ; python_version < "3.4"
+Provides-Extra: test
+Requires-Dist: flake8 (~=3.7.8) ; extra == 'test'
+Requires-Dist: mock (~=3.0.0) ; extra == 'test'
+Requires-Dist: pytest (~=4.6.11) ; extra == 'test'
+Requires-Dist: pytest-cov (~=2.12.1) ; extra == 'test'
+
+sensirion-shdlc-sensorbridge
+============================
+
+This package contains the SHDLC driver for the `Sensirion SEK-SensorBridge`_.
+It provides all SHDLC commands (e.g. reading the serial number) as Python
+methods and handles all the low-level things like type conversions, checksum
+calculation, error handling etc.
+
+
+Installation and Usage
+----------------------
+
+The user manual is available at
+https://sensirion.github.io/python-shdlc-sensorbridge/.
+
+
+.. _Sensirion SEK-SensorBridge: https://www.sensirion.com/sensorbridge/
+
+CHANGELOG
+---------
+
+0.2.0
+:::::
+- Fix for endianness of returned float on ``measure_voltage()`` command
+
+0.1.1
+:::::
+- Add class ``SensorBridgeI2cProxy`` to provide a unified IÂ²C port access
+
+0.1.0
+:::::
+- Initial release
+
+

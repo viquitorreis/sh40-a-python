@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: sensirion-driver-adapters
+Version: 2.1.9
+Summary: adapter classes to use sensirion_i2c_driver package
+Home-page: http://developers.sensirion.com
+Author: Rolf Laich
+Author-email: rolf.laich@sensirion.com
+License: BSD 3-Clause License
+Keywords: driver driver-generator
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6, <4
+Requires-Dist: sensirion-i2c-driver
+Requires-Dist: sensirion-shdlc-driver
+Requires-Dist: sensirion-shdlc-sensorbridge
+Provides-Extra: docs
+Requires-Dist: sphinx (~=2.2.1) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (~=0.4.3) ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: flake8 (~=3.7.8) ; extra == 'test'
+Requires-Dist: pytest (~=7.0.1) ; extra == 'test'
+Requires-Dist: pytest-cov (~=3.0.0) ; extra == 'test'
+
+sensirion-i2c-adapter
+=====================
+
+Install
+-------
+.. sourcecode:: bash
+
+    pip install sensirion-driver-adapters
+
+Recommended usage is within a virtualenv.
+
+Usage
+-----
+.. sourcecode:: python
+
+    import sensirion_driver_adapters
+
+CHANGELOG
+---------
+
+2.1.9
+:::::
+- fix usage of I2cChannel without CRC
+
+2.1.8
+:::::
+- Make mocks available
+- Add channel provider
+- Provide i2c_general_call_reset
+
+2.1.4
+:::::
+- Add support for post processing timeout
+
+2.1.3
+:::::
+- Fix and generalize packing/ unpacking of sequence data
+
+2.1.2
+:::::
+- Update readme
+
+2.1.1
+:::::
+- Fix dynamic_sized_unpack
+
+2.1.0
+:::::
+- Allow to use directly pack sequence type arguments.
+
+2.0.1
+:::::
+- Fix version 2.0.0
+
+2.0.0
+:::::
+- Change package name to sensirion-driver-adapters.
+- Allows to use the i2c and shdlc sensors with the
+  standard sensirion drivers.
+
+1.2.0
+:::::
+- Single byte array response can be represented as integer.
+
+1.1.0
+:::::
+- Support to work with multiple sensors at the same time
+
+1.0.1
+:::::
+
+- First public release
+- Extended documentation
+
+1.0.0
+:::::
+- added support for ignore_ack
+
+0.9.0
+:::::
+- Initial release
+
+

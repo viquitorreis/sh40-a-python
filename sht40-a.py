@@ -19,9 +19,7 @@ def simulate_data():
 def read_sht40(sensor):
     """Read temperature and humidity from the SHT40 sensor."""
     try:
-        temperature, humidity = sensor.measure_lowest_precision()
-        temperature = round(temperature.degrees_celsius, 2)
-        humidity = round(humidity.percent_rh, 2)
+        (temperature, humidity) = sensor.measure_lowest_precision()
         return temperature, humidity
     except Exception as e:
         print(f"Error reading from sensor: {e}")
